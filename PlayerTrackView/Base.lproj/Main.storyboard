@@ -36,6 +36,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DnC-vp-4SQ">
                                         <rect key="frame" x="6" y="29.5" width="363" height="23"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="songTitleFieldIndentifier"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -48,6 +49,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V90-gz-yln">
                                         <rect key="frame" x="6" y="89" width="363" height="22.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="artistNameFieldIdentifier"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -60,6 +62,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8vn-nv-D8x">
                                         <rect key="frame" x="6" y="148.5" width="363" height="22.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="reasonAddedFieldIdentifier"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -72,6 +75,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="em9-3G-qr0">
                                         <rect key="frame" x="6" y="207.5" width="363" height="23"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="durationFieldIdentfier"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -79,6 +83,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYO-tJ-VTl">
                                         <rect key="frame" x="149.5" y="237.5" width="76" height="22.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="doneButtonIdentifier"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="DONE">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -110,12 +115,14 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w4Y-oW-wDE">
                                         <rect key="frame" x="6" y="32.5" width="363" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="currentTimeFieldIdentifier"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU4-0Z-5fQ">
                                         <rect key="frame" x="115.5" y="74.5" width="144" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="displayCurrentTimeIdentifier"/>
                                         <state key="normal" title="Display Current Time"/>
                                         <connections>
                                             <action selector="currentTimeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFh-Tv-cAK"/>

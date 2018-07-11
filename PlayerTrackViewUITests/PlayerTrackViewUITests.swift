@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import PlayerTrackView
 
 class PlayerTrackViewUITests: XCTestCase {
         
@@ -31,29 +32,49 @@ class PlayerTrackViewUITests: XCTestCase {
     func testExample() {
         
         let app = XCUIApplication()
-        let element2 = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element
-        let element = element2.children(matching: .other).element(boundBy: 0)
-        let textField = element.children(matching: .textField).element(boundBy: 0)
-        textField.tap()
-        textField.typeText("Chris")
         
-        let textField2 = element.children(matching: .textField).element(boundBy: 1)
-        textField2.tap()
-        textField2.typeText("Alex")
+        let songTitle = "Alex"
+        let artistName = "Chris"
+        let reasonAdded = "Added by Me"
+        let duration = "121"
+        let currentTime = "0.2"
         
-        let textField3 = element.children(matching: .textField).element(boundBy: 2)
-        textField3.tap()
-        textField3.typeText("Added by Me")
         
-        let textField4 = element.children(matching: .textField).element(boundBy: 3)
-        textField4.tap()
-        textField4.typeText("200")
-        app.buttons["DONE"].tap()
         
-        let textField5 = element2.children(matching: .other).element(boundBy: 2).children(matching: .textField).element
-        textField5.tap()
-        textField5.typeText(".5")
-        app.buttons["Display Current Time"].tap()
+        
+        let songtitleindentifierTextField = app.textFields["songTitleFieldIndentifier"]
+        songtitleindentifierTextField.tap()
+        songtitleindentifierTextField.typeText(songTitle)
+        
+        let artistnameidentifierTextField = app.textFields["artistNameFieldIdentifier"]
+        artistnameidentifierTextField.tap()
+        artistnameidentifierTextField.tap()
+        artistnameidentifierTextField.typeText(artistName)
+        
+        let reasonaddedidentifierTextField = app.textFields["reasonAddedFieldIdentifier"]
+        reasonaddedidentifierTextField.tap()
+        reasonaddedidentifierTextField.tap()
+        reasonaddedidentifierTextField.typeText(reasonAdded)
+        
+        let durationidentfierTextField = app.textFields["durationFieldIdentfier"]
+        durationidentfierTextField.tap()
+        durationidentfierTextField.tap()
+        durationidentfierTextField.typeText(duration)
+        
+        let currenttimeidentifierTextField = app.textFields["currentTimeFieldIdentifier"]
+        currenttimeidentifierTextField.tap()
+        currenttimeidentifierTextField.typeText(currentTime)
+    
+        app/*@START_MENU_TOKEN@*/.buttons["doneButtonIdentifier"]/*[[".buttons[\"DONE\"]",".buttons[\"doneButtonIdentifier\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app/*@START_MENU_TOKEN@*/.buttons["displayCurrentTimeIdentifier"]/*[[".buttons[\"Display Current Time\"]",".buttons[\"displayCurrentTimeIdentifier\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        XCTAssertEqual(songTitle, app.staticTexts.element(matching: .any, identifier: "songTitleIdentifier").label)
+        XCTAssertEqual(artistName, app.staticTexts.element(matching: .any, identifier: "artistIdentifier").label)
+        XCTAssertEqual(reasonAdded, app.staticTexts.element(matching: .any, identifier: "reasonAddedIdentifier").label) //reason added test
+        XCTAssertEqual("2:01", app.staticTexts.element(matching: .any, identifier: "durationIdentifier").label) //currentTime test
+        XCTAssertEqual("0:24", app.staticTexts.element(matching: .any, identifier: "currentTimeIdentifier").label)
+        
+        
         
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

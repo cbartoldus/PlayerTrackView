@@ -12,6 +12,7 @@ class PlayerTrackView: NibView {
     
     @IBOutlet weak var songTitle: UILabel!
     
+    
     @IBOutlet weak var artistName: UILabel!
     
     @IBOutlet weak var reasonAdded: UILabel!
@@ -49,6 +50,5 @@ class PlayerTrackView: NibView {
         
         return formatter.string(from: duration)!
     }
-    
     
 }

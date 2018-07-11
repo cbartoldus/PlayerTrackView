@@ -27,6 +27,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         playerTrackView.setTitles(title: "Hi", artist: "Artist", addedBy: "Added By Me", duration: 300)
         playerTrackView.setCurrentTimeValues(currentSongTimeFloat: 0.3, duration: 300)
+        
+        
     }
     
     @IBAction func doneButtonPress(_ sender: UIButton) {
@@ -47,6 +49,7 @@ class ViewController: UIViewController {
         }
         playerTrackView.setCurrentTimeValues(currentSongTimeFloat: currentTimeValue, duration: durationValue)
     }
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
