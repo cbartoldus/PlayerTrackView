@@ -12,10 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerTrackView" customModule="PlayerTrackView" customModuleProvider="target">
             <connections>
-                <outlet property="addedByName" destination="yZF-Rc-qkF" id="BZY-cT-P7Z"/>
                 <outlet property="artistName" destination="SfL-U6-Gfb" id="rP4-j2-3fF"/>
                 <outlet property="currentSongTime" destination="IZ5-3Z-Q1k" id="SAa-Mw-Bzc"/>
                 <outlet property="playerProgressBar" destination="i6R-oN-McC" id="nFm-Ko-0a0"/>
+                <outlet property="reasonAdded" destination="yZF-Rc-qkF" id="BZY-cT-P7Z"/>
                 <outlet property="songDuration" destination="Ba7-w0-Iph" id="0mX-no-9eb"/>
                 <outlet property="songTitle" destination="XQd-gM-VCm" id="Dkr-Bu-5ao"/>
             </connections>

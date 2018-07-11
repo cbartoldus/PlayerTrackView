@@ -14,7 +14,7 @@ class PlayerTrackView: NibView {
     
     @IBOutlet weak var artistName: UILabel!
     
-    @IBOutlet weak var addedByName: UILabel!
+    @IBOutlet weak var reasonAdded: UILabel!
     
     @IBOutlet var playerProgressBar: UIProgressView!
     
@@ -25,16 +25,18 @@ class PlayerTrackView: NibView {
     func setTitles(title: String, artist: String, addedBy: String, duration: Int) {
         self.songTitle.text = title
         self.artistName.text = artist
-        self.addedByName.text = addedBy
+        self.reasonAdded.text = addedBy
         let durationDouble = Double(duration)
         
         self.songDuration.text = doubleToStringTimeFormatting(duration: durationDouble)
     }
     
     
-    func setCurrentTimeValues(currentSongTimeFloat: Float) {
+    func setCurrentTimeValues(currentSongTimeFloat: Float, duration: Int) {
         playerProgressBar.setProgress(currentSongTimeFloat, animated: true)
-        let currentSongTimeDouble: Double = Double(currentSongTimeFloat*60)
+        
+        let currentSongTimeDouble: Double = Double(currentSongTimeFloat) * Double(duration)
+        
 
         self.currentSongTime.text = doubleToStringTimeFormatting(duration: currentSongTimeDouble)
     }
