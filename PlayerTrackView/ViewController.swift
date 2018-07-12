@@ -27,14 +27,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startSongTimerButton: UIButton!
     
-    @IBOutlet weak var updateVerticalContraintButton: UIButton!
+    @IBOutlet weak var hideButton: UIButton!
+    
+    @IBOutlet weak var showButton: UIButton!
     
     var timer = Timer()
     
     var startDate: Date?
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
+        
+        self.playerTrackViewText.delegate = self
+        
         playerTrackViewText.setTitles(title: "Song Title", artist: "Artist Name", addedBy: "Reason Added")
         playerTrackView.setDuration(duration: 300)
         playerTrackView.setCurrentTimeValues(currentSongTimeFloat: 0.5, duration: 300, animated: true)
@@ -54,8 +61,17 @@ class ViewController: UIViewController {
         
         
     }
-    @IBAction func updateVerticalConstraint(_ sender: UIButton) {
-        playerTrackViewText.updateVerticalSpaceConstraint()
+    @IBAction func hideButtonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.5) {
+            self.playerTrackViewText.hideMuteAndSkip()
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @IBAction func showButtonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2) {
+            self.playerTrackViewText.showMuteAndSkip()
+        }
     }
     
     @objc private func timerFired(_ timer: Timer) {
@@ -104,7 +120,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
+extension ViewController: PlayerTrackViewTextDelegate {
+    func muteTapped() {
+        print("mute button tapped")
+    }
+    
+    func skipTapped() {
+        print("skip button tapped")
+    }
+    
+    func moreTapped() {
+        print("more button tapped")
+    }
+}

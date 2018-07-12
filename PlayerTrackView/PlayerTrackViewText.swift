@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol PlayerTrackViewTextDelegate {
+    func muteTapped ()
+    func skipTapped ()
+    func moreTapped ()
+}
+
 class PlayerTrackViewText: NibView {
     @IBOutlet weak var songTitle: UILabel!
     
@@ -17,7 +23,44 @@ class PlayerTrackViewText: NibView {
     
     @IBOutlet weak var textVerticalSpaceConstraint: NSLayoutConstraint!
     
-    func updateVerticalSpaceConstraint() {
+    @IBOutlet weak var muteButton: UIButton!
+    
+    @IBOutlet weak var skipButton: UIButton!
+    
+    @IBOutlet weak var moreButton: UIButton!
+    
+    var delegate: PlayerTrackViewTextDelegate?
+    
+    //Button Actions
+    @IBAction func muteTapped(_ sender: UIButton) {
+        self.delegate?.muteTapped()
+    }
+    
+    @IBAction func skipTapped(_ sender: UIButton) {
+        self.delegate?.skipTapped()
+    }
+    
+    @IBAction func moreTapped(_ sender: UIButton) {
+        self.delegate?.moreTapped()
+    }
+    
+    func hideMuteAndSkip(){
+        self.muteButton.isHidden = true
+        self.skipButton.isHidden = true
+        //growVerticalSpaceConstraint()
+    }
+    
+    func showMuteAndSkip(){
+        self.muteButton.isHidden = false
+        self.skipButton.isHidden = false
+        //shrinkVerticalSpaceConstraint()
+    }
+    
+    func growVerticalSpaceConstraint() {
+        textVerticalSpaceConstraint.constant = 5
+    }
+    
+    func shrinkVerticalSpaceConstraint() {
         textVerticalSpaceConstraint.constant = 3
     }
     
@@ -33,3 +76,4 @@ class PlayerTrackViewText: NibView {
 
 
 }
+

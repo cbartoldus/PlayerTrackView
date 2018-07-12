@@ -72,10 +72,11 @@ class PlayerTrackViewUITests: XCTestCase {
         XCTAssertEqual("2:01", app.staticTexts.element(matching: .any, identifier: "durationIdentifier").label) //currentTime test
         
         app.buttons["startSongTimerButtonIdentifier"].tap()
+        app.buttons["updateVerticalConstraintsIdentifier"].tap()
         
         
         XCTAssertEqual(songTitle, app.staticTexts.element(matching: .any, identifier: "songTitleIdentifier").label)
-        XCTAssertEqual(artistName, app.staticTexts.element(matching: .any, identifier: "artistIdentifier").label)
+        XCTAssertEqual(artistName + "  •", app.staticTexts.element(matching: .any, identifier: "artistIdentifier" ).label)
         XCTAssertEqual(reasonAdded, app.staticTexts.element(matching: .any, identifier: "reasonAddedIdentifier").label) //reason added test
         
         
