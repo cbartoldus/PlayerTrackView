@@ -68,11 +68,15 @@ class PlayerTrackViewUITests: XCTestCase {
         app/*@START_MENU_TOKEN@*/.buttons["doneButtonIdentifier"]/*[[".buttons[\"DONE\"]",".buttons[\"doneButtonIdentifier\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app/*@START_MENU_TOKEN@*/.buttons["displayCurrentTimeIdentifier"]/*[[".buttons[\"Display Current Time\"]",".buttons[\"displayCurrentTimeIdentifier\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
+        XCTAssertEqual("0:24", app.staticTexts.element(matching: .any, identifier: "currentTimeIdentifier").label)
+        XCTAssertEqual("2:01", app.staticTexts.element(matching: .any, identifier: "durationIdentifier").label) //currentTime test
+        
+        app.buttons["startSongTimerButtonIdentifier"].tap()
+        
+        
         XCTAssertEqual(songTitle, app.staticTexts.element(matching: .any, identifier: "songTitleIdentifier").label)
         XCTAssertEqual(artistName, app.staticTexts.element(matching: .any, identifier: "artistIdentifier").label)
         XCTAssertEqual(reasonAdded, app.staticTexts.element(matching: .any, identifier: "reasonAddedIdentifier").label) //reason added test
-        XCTAssertEqual("2:01", app.staticTexts.element(matching: .any, identifier: "durationIdentifier").label) //currentTime test
-        XCTAssertEqual("0:24", app.staticTexts.element(matching: .any, identifier: "currentTimeIdentifier").label)
         
         
         

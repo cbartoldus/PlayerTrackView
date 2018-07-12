@@ -12,53 +12,34 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerTrackView" customModule="PlayerTrackView" customModuleProvider="target">
             <connections>
-                <outlet property="artistName" destination="SfL-U6-Gfb" id="rP4-j2-3fF"/>
                 <outlet property="currentSongTime" destination="IZ5-3Z-Q1k" id="SAa-Mw-Bzc"/>
                 <outlet property="playerProgressBar" destination="i6R-oN-McC" id="nFm-Ko-0a0"/>
-                <outlet property="reasonAdded" destination="yZF-Rc-qkF" id="BZY-cT-P7Z"/>
                 <outlet property="songDuration" destination="Ba7-w0-Iph" id="0mX-no-9eb"/>
-                <outlet property="songTitle" destination="XQd-gM-VCm" id="Dkr-Bu-5ao"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+            <rect key="frame" x="0.0" y="0.0" width="327" height="23"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Tears Left To Cry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQd-gM-VCm">
-                    <rect key="frame" x="24" y="24" width="132" height="17"/>
-                    <accessibility key="accessibilityConfiguration" identifier="songTitleIdentifier"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ariana Grande" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfL-U6-Gfb">
-                    <rect key="frame" x="24" y="46" width="81" height="14.5"/>
-                    <accessibility key="accessibilityConfiguration" identifier="artistIdentifier"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ5-3Z-Q1k">
-                    <rect key="frame" x="24" y="88" width="24.5" height="15"/>
+                    <rect key="frame" x="0.0" y="8" width="24.5" height="15"/>
                     <accessibility key="accessibilityConfiguration" identifier="currentTimeIdentifier"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Added by Sam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZF-Rc-qkF">
-                    <rect key="frame" x="113" y="46" width="82" height="15"/>
-                    <accessibility key="accessibilityConfiguration" identifier="reasonAddedIdentifier"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" red="0.70603162050247192" green="0.63366067409515381" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="i6R-oN-McC">
-                    <rect key="frame" x="24" y="80" width="327" height="2"/>
-                    <accessibility key="accessibilityConfiguration" identifier="progressBarIdentifier"/>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" progressImage="ThemeHorizontalButtonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="i6R-oN-McC">
+                    <rect key="frame" x="0.0" y="0.0" width="327" height="2"/>
+                    <color key="backgroundColor" red="0.19149413704872131" green="0.19120746850967407" blue="0.28594568371772766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.38112035393714905" green="0.28677433729171753" blue="0.96613997220993042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" identifier="progressBarIdentifier">
+                        <accessibilityTraits key="traits" updatesFrequently="YES"/>
+                    </accessibility>
+                    <color key="trackTintColor" red="0.19149413700000001" green="0.19120746850000001" blue="0.28594568370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </progressView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:26" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba7-w0-Iph">
-                    <rect key="frame" x="324" y="88" width="27" height="15"/>
+                    <rect key="frame" x="300" y="8" width="27" height="15"/>
                     <accessibility key="accessibilityConfiguration" identifier="durationIdentifier"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -68,24 +49,21 @@
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <accessibility key="accessibilityConfiguration" identifier="playerTrackViewIdentifier"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IZ5-3Z-Q1k" secondAttribute="bottom" constant="1" id="7Oj-Sw-CJx"/>
-                <constraint firstItem="XQd-gM-VCm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="9Hk-rR-1NR"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ba7-w0-Iph" secondAttribute="bottom" constant="1" id="G1x-gy-cM8"/>
-                <constraint firstItem="i6R-oN-McC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="KTP-xv-BCs"/>
-                <constraint firstItem="i6R-oN-McC" firstAttribute="top" secondItem="yZF-Rc-qkF" secondAttribute="bottom" constant="19" id="adK-nV-XHO"/>
-                <constraint firstItem="yZF-Rc-qkF" firstAttribute="leading" secondItem="SfL-U6-Gfb" secondAttribute="trailing" constant="8" id="ddd-zO-BpP"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ba7-w0-Iph" secondAttribute="trailing" constant="24" id="dpS-cn-NMI"/>
-                <constraint firstItem="SfL-U6-Gfb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="fOu-Tx-EME"/>
-                <constraint firstAttribute="trailing" secondItem="i6R-oN-McC" secondAttribute="trailing" constant="24" id="fVm-gv-aQH"/>
-                <constraint firstItem="SfL-U6-Gfb" firstAttribute="top" secondItem="XQd-gM-VCm" secondAttribute="bottom" constant="5" id="gpD-OA-jDe"/>
-                <constraint firstItem="yZF-Rc-qkF" firstAttribute="centerY" secondItem="SfL-U6-Gfb" secondAttribute="centerY" id="h34-tQ-gBc"/>
-                <constraint firstItem="IZ5-3Z-Q1k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="wUI-iV-EtT"/>
-                <constraint firstItem="XQd-gM-VCm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="wdE-Sy-bWl"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yZF-Rc-qkF" secondAttribute="trailing" constant="24" id="zme-pM-x3r"/>
+                <constraint firstItem="Ba7-w0-Iph" firstAttribute="top" secondItem="i6R-oN-McC" secondAttribute="bottom" constant="6" id="Sgy-2A-ftj"/>
+                <constraint firstItem="IZ5-3Z-Q1k" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bWa-82-gCW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ba7-w0-Iph" secondAttribute="trailing" id="boi-gd-pnu"/>
+                <constraint firstItem="i6R-oN-McC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cdb-Ok-NdA"/>
+                <constraint firstItem="IZ5-3Z-Q1k" firstAttribute="top" secondItem="i6R-oN-McC" secondAttribute="bottom" constant="6" id="d6q-aL-cDz"/>
+                <constraint firstItem="Ba7-w0-Iph" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="mt9-pS-n1s"/>
+                <constraint firstAttribute="trailing" secondItem="i6R-oN-McC" secondAttribute="trailing" id="o50-1g-7xU"/>
+                <constraint firstItem="IZ5-3Z-Q1k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="r4G-yM-avh"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="663" y="68"/>
+            <point key="canvasLocation" x="657.5" y="109.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ThemeHorizontalButtonBackground" width="317" height="55"/>
+    </resources>
 </document>

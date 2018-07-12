@@ -16,6 +16,8 @@
 		0B31447020F53D50001F8B20 /* PlayerTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31446F20F53D50001F8B20 /* PlayerTrackView.swift */; };
 		0B31447220F53D78001F8B20 /* PlayerTrackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31447120F53D78001F8B20 /* PlayerTrackView.xib */; };
 		0BEB415D20F56A330008D600 /* PlayerTrackViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB415C20F56A330008D600 /* PlayerTrackViewUITests.swift */; };
+		0BEB416520F6C8590008D600 /* PlayerTrackViewText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BEB416420F6C8590008D600 /* PlayerTrackViewText.xib */; };
+		0BEB416920F6CC9E0008D600 /* PlayerTrackViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB416820F6CC9E0008D600 /* PlayerTrackViewText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		0BEB415A20F56A320008D600 /* PlayerTrackViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerTrackViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEB415C20F56A330008D600 /* PlayerTrackViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackViewUITests.swift; sourceTree = "<group>"; };
 		0BEB415E20F56A330008D600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BEB416420F6C8590008D600 /* PlayerTrackViewText.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTrackViewText.xib; sourceTree = "<group>"; };
+		0BEB416820F6CC9E0008D600 /* PlayerTrackViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackViewText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +94,9 @@
 				0B31446420F53C02001F8B20 /* LaunchScreen.storyboard */,
 				0B31446720F53C02001F8B20 /* Info.plist */,
 				0B31446D20F53C26001F8B20 /* NibView.swift */,
+				0BEB416820F6CC9E0008D600 /* PlayerTrackViewText.swift */,
 				0B31446F20F53D50001F8B20 /* PlayerTrackView.swift */,
+				0BEB416420F6C8590008D600 /* PlayerTrackViewText.xib */,
 				0B31447120F53D78001F8B20 /* PlayerTrackView.xib */,
 			);
 			path = PlayerTrackView;
@@ -188,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEB416520F6C8590008D600 /* PlayerTrackViewText.xib in Resources */,
 				0B31446620F53C02001F8B20 /* LaunchScreen.storyboard in Resources */,
 				0B31447220F53D78001F8B20 /* PlayerTrackView.xib in Resources */,
 				0B31446320F53C02001F8B20 /* Assets.xcassets in Resources */,
@@ -210,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B31445E20F53C02001F8B20 /* ViewController.swift in Sources */,
+				0BEB416920F6CC9E0008D600 /* PlayerTrackViewText.swift in Sources */,
 				0B31447020F53D50001F8B20 /* PlayerTrackView.swift in Sources */,
 				0B31445C20F53C02001F8B20 /* AppDelegate.swift in Sources */,
 				0B31446E20F53C26001F8B20 /* NibView.swift in Sources */,

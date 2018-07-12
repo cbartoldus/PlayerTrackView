@@ -10,12 +10,6 @@ import UIKit
 
 class PlayerTrackView: NibView {
     
-    @IBOutlet weak var songTitle: UILabel!
-    
-    
-    @IBOutlet weak var artistName: UILabel!
-    
-    @IBOutlet weak var reasonAdded: UILabel!
     
     @IBOutlet var playerProgressBar: UIProgressView!
     
@@ -23,20 +17,26 @@ class PlayerTrackView: NibView {
     
     @IBOutlet weak var songDuration: UILabel!
     
-    func setTitles(title: String, artist: String, addedBy: String, duration: Int) {
-        self.songTitle.text = title
-        self.artistName.text = artist
-        self.reasonAdded.text = addedBy
+    
+    func setDuration(duration: Int) {
         let durationDouble = Double(duration)
         
         self.songDuration.text = doubleToStringTimeFormatting(duration: durationDouble)
     }
     
-    
-    func setCurrentTimeValues(currentSongTimeFloat: Float, duration: Int) {
-        playerProgressBar.setProgress(currentSongTimeFloat, animated: true)
+    @objc func setCurrentTimeValues(currentSongTimeFloat: Float, duration: Int, animated: Bool) {
         
-        let currentSongTimeDouble: Double = Double(currentSongTimeFloat) * Double(duration)
+        var currentSongTimeDouble: Double = Double(currentSongTimeFloat) * Double(duration)
+        
+        if currentSongTimeFloat < 0 {
+            playerProgressBar.setProgress(0.0, animated: animated)
+            currentSongTimeDouble = 0.0
+        } else if currentSongTimeFloat > 1 {
+            playerProgressBar.setProgress(1.0, animated: animated)
+            currentSongTimeDouble = Double(duration)
+        } else {
+            playerProgressBar.setProgress(currentSongTimeFloat, animated: animated)
+        }
         
 
         self.currentSongTime.text = doubleToStringTimeFormatting(duration: currentSongTimeDouble)
@@ -44,9 +44,14 @@ class PlayerTrackView: NibView {
     
     func doubleToStringTimeFormatting(duration: Double) -> String {
         let formatter = DateComponentsFormatter()
+        
         formatter.unitsStyle = .positional
-        formatter.allowedUnits = [ .minute, .second ]
         formatter.zeroFormattingBehavior = [ .pad ]
+        if duration > 3600.0 {
+            formatter.allowedUnits = [.hour, .minute, .second ]
+        } else {
+            formatter.allowedUnits = [ .minute, .second ]
+        }
         
         return formatter.string(from: duration)!
     }

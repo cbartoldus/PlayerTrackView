@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerTrackViewText" customModule="PlayerTrackView" customModuleProvider="target">
+            <connections>
+                <outlet property="artistName" destination="Vtw-hK-Opz" id="44M-vd-RtU"/>
+                <outlet property="reasonAdded" destination="CyP-fX-Ip6" id="jJX-AD-Cz4"/>
+                <outlet property="songTitle" destination="lHF-2z-9B3" id="qlk-79-HkT"/>
+                <outlet property="textVerticalSpaceConstraint" destination="fjs-y1-ZNE" id="g0U-iU-hM8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="37"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHF-2z-9B3">
+                    <rect key="frame" x="0.0" y="0.0" width="66" height="17"/>
+                    <accessibility key="accessibilityConfiguration" identifier="songTitleIdentifier"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name  •" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtw-hK-Opz">
+                    <rect key="frame" x="0.0" y="22" width="80" height="15"/>
+                    <accessibility key="accessibilityConfiguration" identifier="artistIdentifier"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyP-fX-Ip6">
+                    <rect key="frame" x="88" y="22" width="82" height="15"/>
+                    <accessibility key="accessibilityConfiguration" identifier="reasonAddedIdentifier"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.70603162050000001" green="0.63366067410000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="lHF-2z-9B3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1LP-ZJ-mGC"/>
+                <constraint firstItem="Vtw-hK-Opz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6sr-TD-NUl"/>
+                <constraint firstItem="CyP-fX-Ip6" firstAttribute="centerY" secondItem="Vtw-hK-Opz" secondAttribute="centerY" id="PE3-Xm-bU3"/>
+                <constraint firstItem="Vtw-hK-Opz" firstAttribute="top" secondItem="lHF-2z-9B3" secondAttribute="bottom" constant="5" id="fjs-y1-ZNE"/>
+                <constraint firstItem="CyP-fX-Ip6" firstAttribute="leading" secondItem="Vtw-hK-Opz" secondAttribute="trailing" constant="8" id="qbG-Ya-1mZ"/>
+                <constraint firstItem="lHF-2z-9B3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="r2H-54-hH9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="26.5" y="-377.5"/>
+        </view>
+    </objects>
+</document>
