@@ -10,11 +10,6 @@ import UIKit
 
 class PlayerTrackView: NibView {
     
-    @IBOutlet weak var songTitle: UILabel!
-    
-    @IBOutlet weak var artistName: UILabel!
-    
-    @IBOutlet weak var addedByName: UILabel!
     
     @IBOutlet var playerProgressBar: UIProgressView!
     
@@ -22,31 +17,43 @@ class PlayerTrackView: NibView {
     
     @IBOutlet weak var songDuration: UILabel!
     
-    func setTitles(title: String, artist: String, addedBy: String, duration: Int) {
-        self.songTitle.text = title
-        self.artistName.text = artist
-        self.addedByName.text = addedBy
+    
+    func setDuration(duration: Int) {
         let durationDouble = Double(duration)
         
         self.songDuration.text = doubleToStringTimeFormatting(duration: durationDouble)
     }
     
-    
-    func setCurrentTimeValues(currentSongTimeFloat: Float) {
-        playerProgressBar.setProgress(currentSongTimeFloat, animated: true)
-        let currentSongTimeDouble: Double = Double(currentSongTimeFloat*60)
+    @objc func setCurrentTimeValues(currentSongTimeFloat: Float, duration: Int, animated: Bool) {
+        
+        var currentSongTimeDouble: Double = Double(currentSongTimeFloat) * Double(duration)
+        
+        if currentSongTimeFloat < 0 {
+            playerProgressBar.setProgress(0.0, animated: animated)
+            currentSongTimeDouble = 0.0
+        } else if currentSongTimeFloat > 1 {
+            playerProgressBar.setProgress(1.0, animated: animated)
+            currentSongTimeDouble = Double(duration)
+        } else {
+            playerProgressBar.setProgress(currentSongTimeFloat, animated: animated)
+        }
+        
 
         self.currentSongTime.text = doubleToStringTimeFormatting(duration: currentSongTimeDouble)
     }
     
     func doubleToStringTimeFormatting(duration: Double) -> String {
         let formatter = DateComponentsFormatter()
+        
         formatter.unitsStyle = .positional
-        formatter.allowedUnits = [ .minute, .second ]
         formatter.zeroFormattingBehavior = [ .pad ]
+        if duration > 3600.0 {
+            formatter.allowedUnits = [.hour, .minute, .second ]
+        } else {
+            formatter.allowedUnits = [ .minute, .second ]
+        }
         
         return formatter.string(from: duration)!
     }
-    
     
 }

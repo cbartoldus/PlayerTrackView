@@ -15,7 +15,20 @@
 		0B31446E20F53C26001F8B20 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31446D20F53C26001F8B20 /* NibView.swift */; };
 		0B31447020F53D50001F8B20 /* PlayerTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B31446F20F53D50001F8B20 /* PlayerTrackView.swift */; };
 		0B31447220F53D78001F8B20 /* PlayerTrackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B31447120F53D78001F8B20 /* PlayerTrackView.xib */; };
+		0BEB415D20F56A330008D600 /* PlayerTrackViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB415C20F56A330008D600 /* PlayerTrackViewUITests.swift */; };
+		0BEB416520F6C8590008D600 /* PlayerTrackViewText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BEB416420F6C8590008D600 /* PlayerTrackViewText.xib */; };
+		0BEB416920F6CC9E0008D600 /* PlayerTrackViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEB416820F6CC9E0008D600 /* PlayerTrackViewText.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BEB415F20F56A330008D600 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B31445020F53C02001F8B20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B31445720F53C02001F8B20;
+			remoteInfo = PlayerTrackView;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B31445820F53C02001F8B20 /* PlayerTrackView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerTrackView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +41,22 @@
 		0B31446D20F53C26001F8B20 /* NibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		0B31446F20F53D50001F8B20 /* PlayerTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackView.swift; sourceTree = "<group>"; };
 		0B31447120F53D78001F8B20 /* PlayerTrackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTrackView.xib; sourceTree = "<group>"; };
+		0BEB415A20F56A320008D600 /* PlayerTrackViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerTrackViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BEB415C20F56A330008D600 /* PlayerTrackViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackViewUITests.swift; sourceTree = "<group>"; };
+		0BEB415E20F56A330008D600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BEB416420F6C8590008D600 /* PlayerTrackViewText.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTrackViewText.xib; sourceTree = "<group>"; };
+		0BEB416820F6CC9E0008D600 /* PlayerTrackViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackViewText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0B31445520F53C02001F8B20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BEB415720F56A320008D600 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				0B31445A20F53C02001F8B20 /* PlayerTrackView */,
+				0BEB415B20F56A320008D600 /* PlayerTrackViewUITests */,
 				0B31445920F53C02001F8B20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				0B31445820F53C02001F8B20 /* PlayerTrackView.app */,
+				0BEB415A20F56A320008D600 /* PlayerTrackViewUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,10 +94,21 @@
 				0B31446420F53C02001F8B20 /* LaunchScreen.storyboard */,
 				0B31446720F53C02001F8B20 /* Info.plist */,
 				0B31446D20F53C26001F8B20 /* NibView.swift */,
+				0BEB416820F6CC9E0008D600 /* PlayerTrackViewText.swift */,
 				0B31446F20F53D50001F8B20 /* PlayerTrackView.swift */,
+				0BEB416420F6C8590008D600 /* PlayerTrackViewText.xib */,
 				0B31447120F53D78001F8B20 /* PlayerTrackView.xib */,
 			);
 			path = PlayerTrackView;
+			sourceTree = "<group>";
+		};
+		0BEB415B20F56A320008D600 /* PlayerTrackViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0BEB415C20F56A330008D600 /* PlayerTrackViewUITests.swift */,
+				0BEB415E20F56A330008D600 /* Info.plist */,
+			);
+			path = PlayerTrackViewUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +131,24 @@
 			productReference = 0B31445820F53C02001F8B20 /* PlayerTrackView.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0BEB415920F56A320008D600 /* PlayerTrackViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BEB416320F56A330008D600 /* Build configuration list for PBXNativeTarget "PlayerTrackViewUITests" */;
+			buildPhases = (
+				0BEB415620F56A320008D600 /* Sources */,
+				0BEB415720F56A320008D600 /* Frameworks */,
+				0BEB415820F56A320008D600 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BEB416020F56A330008D600 /* PBXTargetDependency */,
+			);
+			name = PlayerTrackViewUITests;
+			productName = PlayerTrackViewUITests;
+			productReference = 0BEB415A20F56A320008D600 /* PlayerTrackViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -106,6 +162,11 @@
 					0B31445720F53C02001F8B20 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					0BEB415920F56A320008D600 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0B31445720F53C02001F8B20;
 					};
 				};
 			};
@@ -123,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				0B31445720F53C02001F8B20 /* PlayerTrackView */,
+				0BEB415920F56A320008D600 /* PlayerTrackViewUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -132,10 +194,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEB416520F6C8590008D600 /* PlayerTrackViewText.xib in Resources */,
 				0B31446620F53C02001F8B20 /* LaunchScreen.storyboard in Resources */,
 				0B31447220F53D78001F8B20 /* PlayerTrackView.xib in Resources */,
 				0B31446320F53C02001F8B20 /* Assets.xcassets in Resources */,
 				0B31446120F53C02001F8B20 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BEB415820F56A320008D600 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,13 +217,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B31445E20F53C02001F8B20 /* ViewController.swift in Sources */,
+				0BEB416920F6CC9E0008D600 /* PlayerTrackViewText.swift in Sources */,
 				0B31447020F53D50001F8B20 /* PlayerTrackView.swift in Sources */,
 				0B31445C20F53C02001F8B20 /* AppDelegate.swift in Sources */,
 				0B31446E20F53C26001F8B20 /* NibView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BEB415620F56A320008D600 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BEB415D20F56A330008D600 /* PlayerTrackViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BEB416020F56A330008D600 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B31445720F53C02001F8B20 /* PlayerTrackView */;
+			targetProxy = 0BEB415F20F56A330008D600 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0B31445F20F53C02001F8B20 /* Main.storyboard */ = {
@@ -312,6 +399,36 @@
 			};
 			name = Release;
 		};
+		0BEB416120F56A330008D600 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F3C38GMP9;
+				INFOPLIST_FILE = PlayerTrackViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisbartoldus.PlayerTrackViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlayerTrackView;
+			};
+			name = Debug;
+		};
+		0BEB416220F56A330008D600 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F3C38GMP9;
+				INFOPLIST_FILE = PlayerTrackViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisbartoldus.PlayerTrackViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlayerTrackView;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -329,6 +446,15 @@
 			buildConfigurations = (
 				0B31446B20F53C02001F8B20 /* Debug */,
 				0B31446C20F53C02001F8B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BEB416320F56A330008D600 /* Build configuration list for PBXNativeTarget "PlayerTrackViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BEB416120F56A330008D600 /* Debug */,
+				0BEB416220F56A330008D600 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
