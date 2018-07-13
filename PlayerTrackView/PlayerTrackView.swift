@@ -51,10 +51,10 @@ class PlayerTrackView: NibView {
         
         formatter.unitsStyle = .positional
         formatter.zeroFormattingBehavior = [ .pad ]
-        if duration > 3659.0 {
-            formatter.allowedUnits = [.hour, .minute, .second ]
-        } else {
+        if duration < 3600 {
             formatter.allowedUnits = [ .minute, .second ]
+        } else {
+            formatter.allowedUnits = [ .hour, .minute, .second ]
         }
         
         return formatter.string(from: duration)!
