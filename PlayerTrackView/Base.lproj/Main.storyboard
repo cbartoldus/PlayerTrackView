@@ -142,7 +142,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCw-lk-YTY">
                                         <rect key="frame" x="110" y="158.5" width="155" height="30"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="updateVerticalConstraintsIdentifier"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="hideFirstTwoButtonsIdentifier"/>
                                         <state key="normal" title="Hide First Two Buttons"/>
                                         <connections>
                                             <action selector="hideButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWB-Uu-jkx"/>
@@ -150,7 +150,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrg-WM-MFV">
                                         <rect key="frame" x="107" y="200.5" width="161" height="30"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="updateVerticalConstraintsIdentifier"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="showFirstTwoButtonsIdentifier"/>
                                         <state key="normal" title="Show First Two Buttons"/>
                                         <connections>
                                             <action selector="showButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RlR-Cp-K5g"/>

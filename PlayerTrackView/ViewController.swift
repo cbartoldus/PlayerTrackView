@@ -10,34 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var playerTrackView: PlayerTrackView!
-    
     @IBOutlet weak var playerTrackViewText: PlayerTrackViewText!
-    
     @IBOutlet weak var songTitleField: UITextField!
-    
     @IBOutlet weak var artistField: UITextField!
-    
     @IBOutlet weak var reasonAddedField: UITextField!
-    
     @IBOutlet weak var durationField: UITextField!
-    
     @IBOutlet weak var doneButton: UIButton!
-    
     @IBOutlet weak var currentTimeField: UITextField!
-    
     @IBOutlet weak var startSongTimerButton: UIButton!
-    
     @IBOutlet weak var hideButton: UIButton!
-    
     @IBOutlet weak var showButton: UIButton!
     
     var timer = Timer()
-    
     var startDate: Date?
     
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
         
         self.playerTrackViewText.delegate = self
@@ -58,19 +45,20 @@ class ViewController: UIViewController {
         playerTrackView.setCurrentTimeValues(currentSongTimeFloat: 0.3, duration: durationValue, animated: true)
         //figure out seconds left n
         //call every tenth of a second for n seconds
-        
-        
     }
+    
     @IBAction func hideButtonTapped(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.5) {
-            self.playerTrackViewText.hideMuteAndSkip()
-            self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.2, animations: {
+            self.playerTrackViewText.hideMuteAndSkip(hide: true)
+            self.playerTrackViewText.layoutIfNeeded()
+        }) { (finished: Bool) in
         }
     }
     
     @IBAction func showButtonTapped(_ sender: UIButton) {
         UIView.animate(withDuration: 0.2) {
-            self.playerTrackViewText.showMuteAndSkip()
+            self.playerTrackViewText.hideMuteAndSkip(hide: false)
+            self.playerTrackViewText.layoutIfNeeded()
         }
     }
     
@@ -96,7 +84,6 @@ class ViewController: UIViewController {
         }
         playerTrackViewText.setTitles(title: songTitle, artist: artistName, addedBy: reasonAdded)
         playerTrackView.setDuration(duration: durationValue)
-
     }
     
     @IBAction func currentTimeButtonPress(_ sender: UIButton) {
@@ -105,9 +92,7 @@ class ViewController: UIViewController {
         }
         playerTrackView.setCurrentTimeValues(currentSongTimeFloat: currentTimeValue, duration: durationValue, animated: true)
     }
-    
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }

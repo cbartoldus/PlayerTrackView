@@ -33,64 +33,73 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Artist Name  •" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtw-hK-Opz">
-                    <rect key="frame" x="0.0" y="22" width="79.5" height="14.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtw-hK-Opz">
+                    <rect key="frame" x="0.0" y="22" width="67.5" height="14.5"/>
                     <accessibility key="accessibilityConfiguration" identifier="artistIdentifier"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Reason Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyP-fX-Ip6">
-                    <rect key="frame" x="87.5" y="22" width="82" height="14.5"/>
-                    <accessibility key="accessibilityConfiguration" identifier="reasonAddedIdentifier"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" red="0.70603162050000001" green="0.63366067410000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7s3-nc-rYU">
-                    <rect key="frame" x="237" y="0.0" width="90" height="37"/>
+                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7s3-nc-rYU">
+                    <rect key="frame" x="229" y="2.5" width="98" height="32"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jto-ig-O41">
-                            <rect key="frame" x="0.0" y="0.0" width="30" height="37"/>
-                            <state key="normal" title="A"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jto-ig-O41">
+                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" identifier="muteButtonIdentifier"/>
+                            <state key="normal" image="WhiteMuteInLightGrayCircleSmall"/>
                             <connections>
                                 <action selector="muteTapped:" destination="-1" eventType="touchUpInside" id="3kS-I9-O3Z"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFK-fo-V30">
-                            <rect key="frame" x="30" y="0.0" width="30" height="37"/>
-                            <state key="normal" title="B"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFK-fo-V30">
+                            <rect key="frame" x="36" y="0.0" width="28" height="32"/>
+                            <accessibility key="accessibilityConfiguration" identifier="skipButtonIdentifier"/>
+                            <state key="normal" image="WhiteSkipInDarkGrayCircleSmall"/>
                             <connections>
                                 <action selector="skipTapped:" destination="-1" eventType="touchUpInside" id="5hf-1A-ZaJ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UL1-BF-nCv">
-                            <rect key="frame" x="60" y="0.0" width="30" height="37"/>
-                            <state key="normal" title="C"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UL1-BF-nCv">
+                            <rect key="frame" x="68" y="0.0" width="30" height="32"/>
+                            <state key="normal" title="•••">
+                                <color key="titleColor" red="0.41162732243537903" green="0.41196155548095703" blue="0.41167908906936646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                             <connections>
                                 <action selector="moreTapped:" destination="-1" eventType="touchUpInside" id="CAo-em-c0R"/>
                             </connections>
                         </button>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="YFK-fo-V30" firstAttribute="leading" secondItem="jto-ig-O41" secondAttribute="trailing" id="BQQ-IN-VsR"/>
-                        <constraint firstItem="YFK-fo-V30" firstAttribute="leading" secondItem="jto-ig-O41" secondAttribute="trailing" id="Bbi-gu-RyP"/>
-                        <constraint firstItem="jto-ig-O41" firstAttribute="leading" secondItem="7s3-nc-rYU" secondAttribute="leading" id="tQD-JB-cxx"/>
-                    </constraints>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mm1-3O-CdA">
+                    <rect key="frame" x="71.5" y="21.5" width="6" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Reason Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyP-fX-Ip6">
+                    <rect key="frame" x="81.5" y="22" width="82" height="14.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="reasonAddedIdentifier"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.70603162050000001" green="0.63366067410000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="lHF-2z-9B3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1LP-ZJ-mGC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vtw-hK-Opz" secondAttribute="bottom" id="6KG-EO-366"/>
                 <constraint firstItem="Vtw-hK-Opz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6sr-TD-NUl"/>
-                <constraint firstItem="7s3-nc-rYU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="IBM-qo-CtX"/>
                 <constraint firstItem="CyP-fX-Ip6" firstAttribute="centerY" secondItem="Vtw-hK-Opz" secondAttribute="centerY" id="PE3-Xm-bU3"/>
+                <constraint firstItem="mm1-3O-CdA" firstAttribute="leading" secondItem="Vtw-hK-Opz" secondAttribute="trailing" constant="4" id="X1v-Nr-JIP"/>
                 <constraint firstItem="7s3-nc-rYU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CyP-fX-Ip6" secondAttribute="trailing" constant="4" id="Yah-n4-Dzg"/>
+                <constraint firstItem="7s3-nc-rYU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dbo-Wo-Qz4"/>
                 <constraint firstItem="Vtw-hK-Opz" firstAttribute="top" secondItem="lHF-2z-9B3" secondAttribute="bottom" constant="5" id="fjs-y1-ZNE"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7s3-nc-rYU" secondAttribute="bottom" id="lWn-1D-5kG"/>
+                <constraint firstItem="CyP-fX-Ip6" firstAttribute="leading" secondItem="mm1-3O-CdA" secondAttribute="trailing" constant="4" id="oqc-NZ-84y"/>
                 <constraint firstItem="7s3-nc-rYU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lHF-2z-9B3" secondAttribute="trailing" constant="4" id="pXP-J9-v4X"/>
-                <constraint firstItem="CyP-fX-Ip6" firstAttribute="leading" secondItem="Vtw-hK-Opz" secondAttribute="trailing" constant="8" id="qbG-Ya-1mZ"/>
                 <constraint firstItem="lHF-2z-9B3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="r2H-54-hH9"/>
+                <constraint firstItem="mm1-3O-CdA" firstAttribute="centerY" secondItem="Vtw-hK-Opz" secondAttribute="centerY" id="yC3-qM-dVU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7s3-nc-rYU" secondAttribute="trailing" id="zIb-Xu-8U2"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -98,4 +107,8 @@
             <point key="canvasLocation" x="26.5" y="-377.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="WhiteMuteInLightGrayCircleSmall" width="32" height="32"/>
+        <image name="WhiteSkipInDarkGrayCircleSmall" width="28" height="28"/>
+    </resources>
 </document>
