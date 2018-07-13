@@ -19,7 +19,11 @@ class PlayerTrackView: NibView {
     
     
     func setDuration(duration: Int) {
-        let durationDouble = Double(duration)
+        var durationDouble = Double(duration)
+        
+        if durationDouble < 0.0 {
+            durationDouble = 0.0
+        }
         
         self.songDuration.text = doubleToStringTimeFormatting(duration: durationDouble)
     }
@@ -47,7 +51,7 @@ class PlayerTrackView: NibView {
         
         formatter.unitsStyle = .positional
         formatter.zeroFormattingBehavior = [ .pad ]
-        if duration > 3600.0 {
+        if duration > 3659.0 {
             formatter.allowedUnits = [.hour, .minute, .second ]
         } else {
             formatter.allowedUnits = [ .minute, .second ]
